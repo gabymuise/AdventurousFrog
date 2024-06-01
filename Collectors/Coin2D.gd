@@ -1,0 +1,11 @@
+extends Area2D
+
+signal coinCollected
+
+func _on_Coin2D_body_entered(body):
+	#emit_signal("coinCollected")
+	if body.get_name() == "Player":
+		body.add_Coin()
+		queue_free()
+	
+	pass # Replace with function body.
