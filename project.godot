@@ -10,8 +10,8 @@ config_version=4
 
 [application]
 
-config/name="floating platforms"
-run/main_scene="res://Main.tscn"
+config/name="Adventurous Frog"
+run/main_scene="res://Menu.tscn"
 config/icon="res://Player/icon.png"
 
 [gui]
