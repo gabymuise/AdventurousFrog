@@ -49,6 +49,6 @@ func calculate_jump(event : InputEvent):
 		$AnimationPlayer.play("jump")
 
 func add_Coin():
-	var canvasLayer = get_tree().get_root().find_node("CanvasLayer",true,false)
-	
-	canvasLayer.handleCoinCollected()
+	var canvasLayer = get_tree().get_root().find_node("CanvasLayer", true, false)
+	if canvasLayer:
+		canvasLayer.handleCoinCollected()
