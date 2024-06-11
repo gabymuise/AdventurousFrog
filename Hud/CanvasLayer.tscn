@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://UI.gd" type="Script" id=1]
+[ext_resource path="res://Hud/UI.gd" type="Script" id=1]
 [ext_resource path="res://Rocky Roads/Objects/coin_gold.png" type="Texture" id=2]
 
 [sub_resource type="StyleBoxFlat" id=18]

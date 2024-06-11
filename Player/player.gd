@@ -10,7 +10,7 @@ export var time_jump : float = 0.5
 
 onready var strength_jump = (-2 * distance_jump) / time_jump
 onready var gravity = (2 * distance_jump) / (time_jump * time_jump)
-onready var speed : float = 5 * ppm
+onready var speed : float = 8 * ppm
 
 func _ready():
 	pass
