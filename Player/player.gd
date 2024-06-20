@@ -52,3 +52,7 @@ func add_Coin():
 	var canvasLayer = get_tree().get_root().find_node("CanvasLayer", true, false)
 	if canvasLayer:
 		canvasLayer.handleCoinCollected()
+
+func _loseLife():
+	print("reinicia nivel")
+	get_tree().reload_current_scene()
