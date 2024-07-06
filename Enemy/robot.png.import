@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Layer2.png-b05fd71ea5e18fba480539b5cc57ba24.stex"
+path="res://.import/robot.png-46abdef80e759758f061669f76f33f23.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Plataformas/Layer2.png"
-dest_files=[ "res://.import/Layer2.png-b05fd71ea5e18fba480539b5cc57ba24.stex" ]
+source_file="res://Enemy/robot.png"
+dest_files=[ "res://.import/robot.png-46abdef80e759758f061669f76f33f23.stex" ]
 
 [params]
 

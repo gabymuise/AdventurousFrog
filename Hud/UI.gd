@@ -6,7 +6,6 @@ func _ready():
 	
 	#var coinNode = get_tree().get_root().find_node("Coin2D",true,false)
 	#coinNode.connect("coinCollected",self,"handleCoinCollected")
-	
 	$CoinsCollectedTxt.text = String (coins)
 
 func handleCoinCollected():

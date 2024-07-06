@@ -8,10 +8,10 @@
 [ext_resource path="res://Hud/CanvasLayer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Player/player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Collectors/coin_silver.tscn" type="PackedScene" id=8]
-[ext_resource path="res://ZoneFall.gd" type="Script" id=9]
+[ext_resource path="res://Worlds/ZoneFall.gd" type="Script" id=9]
 [ext_resource path="res://Rocky Roads/Deco/lava.png" type="Texture" id=10]
 [ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=11]
-[ext_resource path="res://MenuPause.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Main/MenuPause.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Worlds/Portal.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
