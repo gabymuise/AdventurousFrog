@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Rocky Roads/RANASALTARINA.jpg" type="Texture" id=1]
+[ext_resource path="res://Decorator/RANASALTARINA.jpg" type="Texture" id=1]
 [ext_resource path="res://Main/Menu.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFontData" id=1]
