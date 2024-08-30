@@ -31,12 +31,12 @@ font_path = "res://font/Coffee Spark.otf"
 size = 34
 font_data = SubResource( 15 )
 
-[sub_resource type="DynamicFontData" id=19]
+[sub_resource type="DynamicFontData" id=31]
 font_path = "res://font/Asquire.otf"
 
 [sub_resource type="DynamicFont" id=20]
 size = 21
-font_data = SubResource( 19 )
+font_data = SubResource( 31 )
 
 [sub_resource type="StyleBoxFlat" id=21]
 bg_color = Color( 0.6, 0.6, 0.6, 0.67451 )
@@ -48,12 +48,12 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
-[sub_resource type="DynamicFontData" id=23]
+[sub_resource type="DynamicFontData" id=32]
 font_path = "res://font/Asquire.otf"
 
 [sub_resource type="DynamicFont" id=24]
 size = 21
-font_data = SubResource( 23 )
+font_data = SubResource( 32 )
 
 [sub_resource type="StyleBoxFlat" id=25]
 bg_color = Color( 0.6, 0.6, 0.6, 0.639216 )
@@ -61,19 +61,19 @@ bg_color = Color( 0.6, 0.6, 0.6, 0.639216 )
 [sub_resource type="StyleBoxFlat" id=26]
 bg_color = Color( 1, 1, 1, 1 )
 
-[sub_resource type="DynamicFontData" id=27]
+[sub_resource type="DynamicFontData" id=33]
 font_path = "res://font/Asquire.otf"
 
 [sub_resource type="DynamicFont" id=28]
 size = 21
-font_data = SubResource( 27 )
+font_data = SubResource( 33 )
 
-[sub_resource type="DynamicFontData" id=29]
+[sub_resource type="DynamicFontData" id=34]
 font_path = "res://font/Asquire.otf"
 
 [sub_resource type="DynamicFont" id=30]
 size = 14
-font_data = SubResource( 29 )
+font_data = SubResource( 34 )
 
 [node name="MenuPause" type="Control"]
 pause_mode = 2
@@ -151,7 +151,6 @@ margin_bottom = -129.0
 rect_rotation = 1.33092
 custom_fonts/font = SubResource( 16 )
 text = "ADVENTUROUS FROG"
-percent_visible = -0.0666667
 max_lines_visible = 0
 
 [node name="Setting" type="Control" parent="."]
