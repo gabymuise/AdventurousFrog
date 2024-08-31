@@ -29,8 +29,9 @@ func _on_settings_pressed():
 
 
 func _on_exit_pressed():
-	#get_tree().change_scene("res://Main/Menu.tscn")
-	get_tree().quit()
+	toggle_pause()
+	get_tree().change_scene("res://Main/Menu.tscn")
+
 
 func show_and_hide(first, second):
 	first.show()

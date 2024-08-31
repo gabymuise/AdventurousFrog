@@ -301,7 +301,7 @@ current = true
 [node name="CanvasLayer" parent="Player" instance=ExtResource( 6 )]
 
 [node name="MenuPause" parent="Player" instance=ExtResource( 12 )]
-pause_mode = 2
+visible = false
 margin_left = 2.0
 margin_top = -98.0
 margin_right = 2.0
