@@ -13,9 +13,10 @@
 [ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Main/MenuPause.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Worlds/Portal.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Main/btnA.png" type="Texture" id=14]
-[ext_resource path="res://Main/btnD.png" type="Texture" id=15]
-[ext_resource path="res://Main/btnSpace.png" type="Texture" id=16]
+[ext_resource path="res://Decorator/btnA.png" type="Texture" id=14]
+[ext_resource path="res://Decorator/btnD.png" type="Texture" id=15]
+[ext_resource path="res://Decorator/btnSpace.png" type="Texture" id=16]
+
 
 [sub_resource type="DynamicFontData" id=15]
 font_path = "res://font/Asquire.otf"

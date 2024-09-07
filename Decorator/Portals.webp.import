@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/robot.png-46abdef80e759758f061669f76f33f23.stex"
+path="res://.import/Portals.webp-2d9bc48c5700a58a8093cd6884f95b9c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemy/robot.png"
-dest_files=[ "res://.import/robot.png-46abdef80e759758f061669f76f33f23.stex" ]
+source_file="res://Decorator/Portals.webp"
+dest_files=[ "res://.import/Portals.webp-2d9bc48c5700a58a8093cd6884f95b9c.stex" ]
 
 [params]
 

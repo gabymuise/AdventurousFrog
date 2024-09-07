@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portallayer.png-885ed250b41bb823e60c08ba1a626898.stex"
+path="res://.import/portalsSpriteSheet.png-50849403dd3441e9218b1f1cce07eeef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Worlds/portallayer.png"
-dest_files=[ "res://.import/portallayer.png-885ed250b41bb823e60c08ba1a626898.stex" ]
+source_file="res://Decorator/portalsSpriteSheet.png"
+dest_files=[ "res://.import/portalsSpriteSheet.png-50849403dd3441e9218b1f1cce07eeef.stex" ]
 
 [params]
 
