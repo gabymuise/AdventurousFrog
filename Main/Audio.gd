@@ -18,4 +18,9 @@ func _on_SoundFx_value_changed(value):
 	volume(2, value)
 
 func _on_BackAudio_pressed():
-	get_tree().change_scene("res://Main/Setting.tscn")
+	if PilaScene.scene_stack.size() > 0:
+		print("Returning to previous scene: ", PilaScene.scene_stack.back())  # Depuración
+		get_tree().change_scene(PilaScene.pop_scene())
+	else:
+		print("No previous scene found, returning to settings.")  # Depuración
+		get_tree().change_scene("res://Main/Setting.tscn")

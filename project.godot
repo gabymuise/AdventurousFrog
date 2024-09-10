@@ -16,6 +16,7 @@ run/main_scene="res://Main/Menu.tscn"
 [autoload]
 
 GlobalState="*res://Singleton/GlobalState.gd"
+PilaScene="*res://Singleton/PilaScene.gd"
 
 [display]
 

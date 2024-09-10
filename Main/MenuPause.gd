@@ -1,4 +1,3 @@
-# res://Main/MenuPause.gd
 extends Control
 
 onready var menu = $Menu  # Referencia al nodo del menú
@@ -22,13 +21,11 @@ func _on_start_pressed():
 	toggle_pause()
 
 func _on_settings_pressed():
-	# Guarda la escena actual antes de cambiar
-	GlobalState.previous_scene = get_tree().current_scene.filename
+	PilaScene.push_scene(get_tree().current_scene.filename)
 	toggle_pause()
 	get_tree().change_scene("res://Main/Setting.tscn")
 
 func _on_exit_pressed():
 	toggle_pause()
-	GlobalState.previous_scene = ""  # Reinicia la escena anterior
+	PilaScene.scene_stack.clear()  # Limpiar la pila de escenas
 	get_tree().change_scene("res://Main/Menu.tscn")
-
