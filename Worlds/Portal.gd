@@ -4,7 +4,6 @@ func _ready():
 	pass
 
 func _on_Area2D_body_entered(body):
-	# Si el cuerpo es el jugador y está en el grupo "Players"
 	if body.is_in_group("Players"):
 		var current_level = get_parent()  # Obtener el nodo que representa el nivel actual
 		if current_level.has_method("get_next_level"):

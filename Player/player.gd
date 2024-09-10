@@ -13,7 +13,6 @@ onready var gravity = (2 * distance_jump) / (time_jump * time_jump)
 onready var speed : float = 8 * ppm
 
 func _ready():
-	# Asegúrate de que el jugador esté en el grupo "Players"
 	if not is_in_group("Players"):
 		add_to_group("Players")
 
