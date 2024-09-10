@@ -34,4 +34,3 @@ func is_colliding_with_wall() -> bool:
 func turn_character():
 	moving_left = !moving_left
 	scale.x = -scale.x
-

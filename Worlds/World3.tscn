@@ -211,7 +211,7 @@ extents = Vector2( 2967.5, 127.75 )
 [node name="World" type="Node2D"]
 position = Vector2( 513, 303 )
 script = ExtResource( 14 )
-nextLevel = 2
+nextLevel = 3
 
 [node name="WaterA8Frames" type="Sprite" parent="."]
 position = Vector2( 608, -613 )
@@ -255,7 +255,7 @@ position = Vector2( -350, 108 )
 position = Vector2( 24, 5 )
 
 [node name="Coin4" parent="." instance=ExtResource( 8 )]
-position = Vector2( -167, 50 )
+position = Vector2( -167, 126 )
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 506, 292 )

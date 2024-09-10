@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Decorator/Deco/tree_b.png" type="Texture" id=1]
 [ext_resource path="res://Decorator/Backgrounds/trees.png" type="Texture" id=2]
@@ -10,13 +10,13 @@
 [ext_resource path="res://Collectors/coin_silver.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Worlds/ZoneFall.gd" type="Script" id=9]
 [ext_resource path="res://Decorator/Deco/lava.png" type="Texture" id=10]
-[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Enemy/EnemyBlowfly.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Main/MenuPause.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Worlds/Portal.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Decorator/btnA.png" type="Texture" id=14]
 [ext_resource path="res://Decorator/btnD.png" type="Texture" id=15]
 [ext_resource path="res://Decorator/btnSpace.png" type="Texture" id=16]
-
+[ext_resource path="res://Worlds/level.gd" type="Script" id=17]
 
 [sub_resource type="DynamicFontData" id=15]
 font_path = "res://font/Asquire.otf"
@@ -220,6 +220,8 @@ extents = Vector2( 2967.5, 127.75 )
 
 [node name="World" type="Node2D"]
 position = Vector2( 513, 303 )
+script = ExtResource( 17 )
+nextLevel = 1
 
 [node name="WaterA8Frames" type="Sprite" parent="."]
 position = Vector2( 608, -613 )
