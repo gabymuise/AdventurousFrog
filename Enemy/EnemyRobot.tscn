@@ -37,10 +37,10 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 15.5, 20 )
+extents = Vector2( 9.5, 16.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 21.5, 22 )
+extents = Vector2( 17.5, 22 )
 
 [node name="EnemyRobot" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -49,21 +49,21 @@ script = ExtResource( 2 )
 scale = Vector2( 1.37305, 1.36719 )
 frames = SubResource( 8 )
 animation = "move"
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, 2 )
+position = Vector2( -1.5, 5.5 )
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0.5, 0 )
+position = Vector2( -1.5, 0 )
 shape = SubResource( 2 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2( -31, -22 )
+position = Vector2( -27, -22 )
 scale = Vector2( 0.7, 0.7 )
 enabled = true
 cast_to = Vector2( -3.8147e-06, 68.5714 )

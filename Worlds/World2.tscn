@@ -268,6 +268,9 @@ shape = SubResource( 13 )
 [node name="EnemyBlowfly" parent="." instance=ExtResource( 11 )]
 position = Vector2( 75, -5 )
 
+[node name="EnemyRobot" parent="." instance=ExtResource( 15 )]
+position = Vector2( -308, 108 )
+
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 13, 224 )
 
@@ -283,8 +286,5 @@ margin_left = 2.0
 margin_top = -98.0
 margin_right = 2.0
 margin_bottom = -98.0
-
-[node name="EnemyRobot" parent="." instance=ExtResource( 15 )]
-position = Vector2( -308, 108 )
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
