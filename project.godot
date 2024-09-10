@@ -13,6 +13,10 @@ config_version=4
 config/name="Adventurous Frog"
 run/main_scene="res://Main/Menu.tscn"
 
+[autoload]
+
+GlobalState="*res://Singleton/GlobalState.gd"
+
 [display]
 
 window/stretch/mode="2d"
