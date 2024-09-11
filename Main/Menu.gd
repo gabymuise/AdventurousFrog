@@ -3,6 +3,8 @@ extends Control
 onready var menu = $Menu
 
 func _on_Play_pressed():
+	# Limpiar las monedas al iniciar una nueva partida
+	CoinManager.reset_coins()
 	# Cambiar a la escena principal del juego
 	get_tree().change_scene("res://Worlds/World1.tscn")
 
