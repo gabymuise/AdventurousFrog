@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/btnSpace.png-77bed95501011f48f2208769f82aa006.stex"
+path="res://.import/btnDpxl.png-a6254ce29b2a4c69be91bd00addb67e2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Decorator/btnSpace.png"
-dest_files=[ "res://.import/btnSpace.png-77bed95501011f48f2208769f82aa006.stex" ]
+source_file="res://Decorator/btnDpxl.png"
+dest_files=[ "res://.import/btnDpxl.png-a6254ce29b2a4c69be91bd00addb67e2.stex" ]
 
 [params]
 
