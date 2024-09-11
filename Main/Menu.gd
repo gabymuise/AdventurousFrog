@@ -1,7 +1,5 @@
 extends Control
 
-onready var menu = $Menu
-
 func _on_Play_pressed():
 	# Limpiar las monedas al iniciar una nueva partida
 	CoinManager.reset_coins()
@@ -13,5 +11,5 @@ func _on_Exit_pressed():
 	get_tree().quit()
 
 func _on_Setting_pressed():
-	# Cargar la escena de Settings
+	# Abrir la escena de configuraciones
 	get_tree().change_scene("res://Main/Setting.tscn")

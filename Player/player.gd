@@ -2,7 +2,6 @@ extends KinematicBody2D
 
 var ppm : int = 24
 var direction_horizontal : float
-
 var velocity : Vector2 = Vector2()
 
 export var distance_jump : float = 5 * ppm
@@ -23,7 +22,7 @@ func _physics_process(delta):
 	update_physics(delta)
 	update_animation()
 
-func handle_input(event : InputEvent):
+func handle_input(event):
 	calculate_jump(event)
 	calculate_direction()
 
@@ -47,7 +46,7 @@ func calculate_direction():
 	velocity.x = direction_horizontal * speed
 	flip_h()
 
-func calculate_jump(event : InputEvent):
+func calculate_jump(event):
 	if event.is_action_pressed("jump") and is_on_floor():
 		velocity.y = strength_jump
 		play_animation("jump")

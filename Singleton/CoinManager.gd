@@ -1,6 +1,5 @@
 extends Node
 
-# Almacenamos el número total de monedas recolectadas
 var total_coins = 0
 
 # Función para agregar una moneda

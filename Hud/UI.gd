@@ -1,17 +1,16 @@
 extends CanvasLayer
 
 func _ready():
-	# Muestra la cantidad inicial de monedas
+	# Mostrar el número inicial de monedas en el HUD
 	$CoinsCollectedTxt.text = String(CoinManager.get_total_coins())
-	# Conectar señales de monedas después de un pequeño retraso para asegurarse de que están disponibles
+	# Conectar las señales después de un retraso
 	call_deferred("_connect_coin_signals")
 
 func _connect_coin_signals():
-	# Encuentra todas las monedas en la escena y conéctalas al HUD
+	# Encontrar todas las monedas y conectar la señal al HUD
 	for coin in get_tree().get_nodes_in_group("Coins"):
 		coin.connect("coinCollected", self, "handleCoinCollected")
 
 func handleCoinCollected():
-	print("coin collected")
-	# Actualiza el texto del HUD con la cantidad actual de monedas
+	# Actualizar el HUD cuando se recolecta una moneda
 	$CoinsCollectedTxt.text = String(CoinManager.get_total_coins())

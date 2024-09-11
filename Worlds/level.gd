@@ -2,5 +2,6 @@ extends Node2D
 
 export (int) var nextLevel
 
-func get_next_level():
+# Retorna la ruta al siguiente nivel
+func get_next_level() -> String:
 	return "res://Worlds/Easy/World" + str(nextLevel + 1) + ".tscn"
