@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Decorator/Deco/tree_b.png" type="Texture" id=1]
 [ext_resource path="res://Decorator/Backgrounds/trees.png" type="Texture" id=2]
@@ -13,17 +13,7 @@
 [ext_resource path="res://Enemy/EnemyBlowfly.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Main/MenuPause.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Worlds/Portal.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Decorator/btnA.png" type="Texture" id=14]
-[ext_resource path="res://Decorator/btnD.png" type="Texture" id=15]
-[ext_resource path="res://Decorator/btnSpace.png" type="Texture" id=16]
-[ext_resource path="res://Worlds/level.gd" type="Script" id=17]
-
-[sub_resource type="DynamicFontData" id=15]
-font_path = "res://font/Asquire.otf"
-
-[sub_resource type="DynamicFont" id=16]
-size = 19
-font_data = SubResource( 15 )
+[ext_resource path="res://Worlds/level.gd" type="Script" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -220,8 +210,8 @@ extents = Vector2( 2967.5, 127.75 )
 
 [node name="World" type="Node2D"]
 position = Vector2( 513, 303 )
-script = ExtResource( 17 )
-nextLevel = 1
+script = ExtResource( 14 )
+nextLevel = 2
 
 [node name="WaterA8Frames" type="Sprite" parent="."]
 position = Vector2( 608, -613 )
@@ -243,45 +233,29 @@ position = Vector2( 0, 559.875 )
 scale = Vector2( 4.9974, 10.9219 )
 texture = ExtResource( 10 )
 
-[node name="btnA" type="Sprite" parent="."]
-position = Vector2( -14, 130 )
-scale = Vector2( 0.391667, 0.354545 )
-texture = ExtResource( 14 )
-
-[node name="btnD" type="Sprite" parent="."]
-position = Vector2( 65, 130 )
-scale = Vector2( 0.392, 0.355 )
-texture = ExtResource( 15 )
-
-[node name="btnSpace" type="Sprite" parent="."]
-position = Vector2( 21.875, 172.844 )
-scale = Vector2( 0.0544697, 0.0651092 )
-texture = ExtResource( 16 )
-
-[node name="Label" type="Label" parent="."]
-margin_left = 316.0
-margin_top = 27.0
-margin_right = 378.0
-margin_bottom = 47.0
-custom_colors/font_color = Color( 0.952941, 0.027451, 0.027451, 1 )
-custom_fonts/font = SubResource( 16 )
-text = "ENEMY"
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 collision_layer = 4
 format = 1
-tile_data = PoolIntArray( -1179660, 32, 0, -1179651, 31, 0, -1179639, 31, 0, -1048596, 31, 0, -1048595, 34, 0, -1048584, 34, 0, -1114105, 34, 0, -1114087, 34, 0, -1048574, 34, 0, -1048562, 34, 0, -917527, 34, 0, -917518, 34, 0, -917511, 31, 0, -983031, 34, 0, -983020, 34, 0, -917504, 34, 0, -917499, 31, 0, -786459, 34, 0, -786452, 34, 0, -786450, 32, 0, -851951, 34, 0, -851945, 34, 0, -720908, 31, 0, -720905, 34, 0, -786425, 34, 0, -720896, 32, 0, -720886, 31, 0, -720882, 34, 0, -589840, 34, 0, -655335, 34, 0, -524293, 34, 0, -589822, 34, 0, -589816, 34, 0, -589804, 34, 0, -458778, 34, 0, -393234, 34, 0, -393226, 34, 0, -458737, 34, 0, -393194, 34, 0, -327680, 34, 0, -262139, 34, 0, -196598, 8, 0, -196597, 34, 0, -196596, 10, 0, -196595, 11, 0, -196594, 12, 0, -196593, 13, 0, -196592, 14, 0, -131063, 15, 0, -131062, 16, 0, -131061, 17, 0, -131060, 18, 0, -131059, 19, 0, -131058, 20, 0, -131057, 21, 0, -131056, 22, 0, -131055, 34, 0, -131050, 34, 0, -65525, 23, 0, -65524, 24, 0, -65523, 25, 0, -65522, 26, 0, -65521, 27, 0, 13, 28, 0, 14, 29, 0, 327666, 4, 0, 327667, 3, 0, 327668, 3, 0, 327669, 3, 0, 327670, 3, 0, 327671, 3, 0, 327672, 5, 0, 393234, 4, 0, 393235, 3, 0, 393236, 3, 0, 393237, 3, 0, 393238, 3, 0, 393239, 3, 0, 393240, 5, 0, 589799, 4, 0, 589800, 3, 0, 589801, 3, 0, 589802, 3, 0, 589803, 3, 0, 589804, 3, 0, 589805, 5, 0, 983021, 4, 0, 983022, 3, 0, 983023, 3, 0, 983024, 3, 0, 983025, 3, 0, 983026, 3, 0, 983027, 3, 0, 983028, 3, 0, 983029, 3, 0, 983030, 5, 0, 1114108, 4, 0, 1114109, 3, 0, 1114110, 3, 0, 1114111, 3, 0, 1048576, 3, 0, 1048577, 3, 0, 1048578, 3, 0, 1048579, 3, 0, 1048580, 3, 0, 1048581, 5, 0 )
+tile_data = PoolIntArray( -1179660, 32, 0, -1179651, 31, 0, -1179639, 31, 0, -1048596, 31, 0, -1048595, 34, 0, -1048584, 34, 0, -1114105, 34, 0, -1114087, 34, 0, -1048574, 34, 0, -1048562, 34, 0, -917527, 34, 0, -917518, 34, 0, -917511, 31, 0, -983031, 34, 0, -983020, 34, 0, -917504, 34, 0, -917499, 31, 0, -786459, 34, 0, -786452, 34, 0, -786450, 32, 0, -851951, 34, 0, -851945, 34, 0, -720908, 31, 0, -720905, 34, 0, -786425, 34, 0, -720896, 32, 0, -720886, 31, 0, -720882, 34, 0, -589840, 34, 0, -655335, 34, 0, -524293, 34, 0, -589822, 34, 0, -589816, 34, 0, -589804, 34, 0, -458778, 34, 0, -393242, 33, 0, -393238, 33, 0, -393234, 33, 0, -393226, 34, 0, -458737, 34, 0, -393194, 34, 0, -327680, 34, 0, -262139, 34, 0, -131079, 33, 0, -131075, 33, 0, -196598, 8, 0, -196597, 34, 0, -196596, 10, 0, -196595, 11, 0, -196594, 12, 0, -196593, 13, 0, -196592, 14, 0, -131063, 15, 0, -131062, 16, 0, -131061, 17, 0, -131060, 18, 0, -131059, 19, 0, -131058, 20, 0, -131057, 21, 0, -131056, 22, 0, -131055, 34, 0, -131050, 34, 0, -65525, 23, 0, -65524, 24, 0, -65523, 25, 0, -65522, 26, 0, -65521, 27, 0, 65514, 33, 0, 65518, 33, 0, 13, 28, 0, 14, 29, 0, 131070, 4, 0, 131071, 3, 0, 65536, 3, 0, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 3, 0, 65541, 3, 0, 65542, 3, 0, 65543, 5, 0, 327649, 33, 0, 655334, 33, 0, 655338, 33, 0, 983021, 33, 0, 983025, 33, 0, 983029, 33, 0, 1114108, 33, 0, 1048576, 33, 0 )
 
 [node name="Portal" parent="." instance=ExtResource( 13 )]
-position = Vector2( -95, 74 )
-
-[node name="Coin2" parent="." instance=ExtResource( 8 )]
-position = Vector2( -350, 108 )
+position = Vector2( -427, -107 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
 
 [node name="Coin" parent="." instance=ExtResource( 8 )]
 position = Vector2( -224, 202 )
+
+[node name="Coin2" parent="." instance=ExtResource( 8 )]
+position = Vector2( -350, 126 )
+
+[node name="Coin3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 111, 5 )
+
+[node name="Coin4" parent="." instance=ExtResource( 8 )]
+position = Vector2( -285, -19 )
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 506, 292 )
@@ -292,7 +266,7 @@ position = Vector2( 114.5, 427 )
 shape = SubResource( 13 )
 
 [node name="EnemyBlowfly" parent="." instance=ExtResource( 11 )]
-position = Vector2( 342, 74 )
+position = Vector2( 75, -5 )
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 13, 224 )
