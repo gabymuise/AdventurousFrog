@@ -17,12 +17,6 @@ func toggle_pause():
 func _on_start_pressed():
 	toggle_pause()
 
-# Abrir configuraciones guardando la escena actual
-func _on_settings_pressed():
-	PilaScene.push_scene(get_tree().current_scene.filename)
-	toggle_pause()
-	get_tree().change_scene("res://Main/Setting.tscn")
-
 # Salir al menú principal y limpiar la pila de escenas
 func _on_exit_pressed():
 	toggle_pause()
