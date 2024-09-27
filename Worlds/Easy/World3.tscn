@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Decorator/Deco/tree_b.png" type="Texture" id=1]
 [ext_resource path="res://Decorator/Backgrounds/trees.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Worlds/Portal.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Worlds/level.gd" type="Script" id=14]
 [ext_resource path="res://Enemy/EnemyRobot.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Collectors/coin_gold.tscn" type="PackedScene" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -249,14 +250,14 @@ scale = Vector2( 1, -1 )
 [node name="Coin" parent="." instance=ExtResource( 8 )]
 position = Vector2( -224, 202 )
 
-[node name="Coin2" parent="." instance=ExtResource( 8 )]
-position = Vector2( -310, 108 )
-
 [node name="Coin3" parent="." instance=ExtResource( 8 )]
 position = Vector2( 24, 5 )
 
 [node name="Coin4" parent="." instance=ExtResource( 8 )]
 position = Vector2( -167, 45 )
+
+[node name="Coin5" parent="." instance=ExtResource( 16 )]
+position = Vector2( -332, 116 )
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 506, 292 )
