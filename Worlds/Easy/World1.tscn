@@ -247,8 +247,8 @@ scale = Vector2( 23.1641, 4.08594 )
 texture = ExtResource( 2 )
 
 [node name="Lava" type="Sprite" parent="."]
-position = Vector2( 0, 559.875 )
-scale = Vector2( 4.9974, 10.9219 )
+position = Vector2( 608, 559.875 )
+scale = Vector2( 15.4427, 10.9219 )
 texture = ExtResource( 10 )
 
 [node name="Label" type="Label" parent="."]
