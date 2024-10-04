@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Intense.mp3-8e64fe471e83c0e1b590594e9a7dd1ee.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Intense.mp3"
+dest_files=[ "res://.import/Intense.mp3-8e64fe471e83c0e1b590594e9a7dd1ee.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

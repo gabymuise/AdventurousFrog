@@ -17,6 +17,7 @@ run/main_scene="res://Main/Menu.tscn"
 
 PilaScene="*res://Singleton/PilaScene.gd"
 CoinManager="*res://Singleton/CoinManager.gd"
+AudioManager="*res://Singleton/AudioManager.gd"
 
 [display]
 

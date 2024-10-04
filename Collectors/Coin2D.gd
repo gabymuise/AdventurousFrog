@@ -6,11 +6,11 @@ signal coinCollected
 var coin_value : int = 1
 
 func _ready():
-	connect("body_entered", self, "_on_Coin2D_body_entered")
+	pass
 
 func _on_Coin2D_body_entered(body):
 	if body.get_name() == "Player":
-		# Añadir una moneda (o la cantidad definida) al CoinManager y actualizar al jugador
+		$"../PickupSound".play()
 		CoinManager.add_coin(coin_value)
 		body.add_Coin()
 		emit_signal("coinCollected")

@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Main/Audio.gd" type="Script" id=1]
+[ext_resource path="res://Sounds/SoundMenu.tscn" type="PackedScene" id=2]
 
 [sub_resource type="DynamicFontData" id=34]
 font_path = "res://font/Asquire.otf"
@@ -112,6 +113,8 @@ custom_fonts/font = SubResource( 24 )
 custom_styles/hover = SubResource( 25 )
 custom_styles/normal = SubResource( 26 )
 text = "BACK"
+
+[node name="SoundMenu" parent="." instance=ExtResource( 2 )]
 
 [connection signal="value_changed" from="HBoxContainer/Slider/Master" to="." method="_on_Master_value_changed"]
 [connection signal="value_changed" from="HBoxContainer/Slider/Music" to="." method="_on_Music_value_changed"]
