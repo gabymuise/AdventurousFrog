@@ -21,4 +21,5 @@ func _on_start_pressed():
 func _on_exit_pressed():
 	toggle_pause()
 	PilaScene.scene_stack.clear()
+	AudioManager.play_menu_music() 
 	get_tree().change_scene("res://Main/Menu.tscn")

@@ -2,7 +2,7 @@ extends Area2D
 
 signal coinCollected
 
-# Valor por defecto de las monedas que otorga
+# Valor coin Silver
 var coin_value : int = 1
 
 func _ready():

@@ -6,21 +6,21 @@ var total_coins = 0       # Total de monedas recolectadas a través de niveles
 var level_coins = 0       # Monedas recolectadas en el nivel actual
 var current_level = 1     # Nivel actual
 
-# Función para agregar monedas en el nivel actual
+# Agregar monedas en el nivel actual
 func add_coin(amount: int = 1) -> void:
 	level_coins += amount
 	print("Monedas recolectadas en el nivel ", current_level, ": ", level_coins)
 
-# Función para obtener el total de monedas
+# Obtener el total de monedas
 func get_total_coins() -> int:
 	return total_coins + level_coins
 
-# Función para reiniciar las monedas del nivel actual (por muerte)
+# Reiniciar las monedas del nivel actual (por muerte)
 func reset_level_coins() -> void:
 	level_coins = 0
 	print("Monedas reiniciadas en el nivel ", current_level, ": ", level_coins)
 
-# Función para pasar al siguiente nivel
+# Pasar al siguiente nivel
 func level_completed() -> void:
 	total_coins += level_coins
 	print("Nivel ", current_level, " completado. Monedas totales: ", total_coins)
@@ -29,7 +29,7 @@ func level_completed() -> void:
 	current_level += 1
 	_update_file()  # Guardamos los datos
 
-# Función para cargar los datos de monedas desde un archivo
+# Cargar los datos de monedas desde un archivo
 func load_coins_data() -> void:
 	var coin_data = _load_file(COIN_FILEPATH)
 	if coin_data.has("coins") and coin_data.has("level"):
@@ -38,14 +38,14 @@ func load_coins_data() -> void:
 		print("Datos cargados. Monedas: ", total_coins, " Nivel actual: ", current_level)
 	else:
 		print("No se encontraron datos o los datos son inválidos. Comenzando con 0 monedas.")
-		_update_file()  # Creamos el archivo si no existe
+		_update_file() 
 
-# Función interna para actualizar los datos en el archivo
+# Actualizar los datos en el archivo
 func _update_file() -> void:
 	var coin_data = { "coins": total_coins, "level": current_level }
 	_save_file(COIN_FILEPATH, coin_data)
 
-# Función para gestionar la muerte 
+# Gestionar la muerte 
 func on_player_death() -> void:
 	reset_level_coins() 
 

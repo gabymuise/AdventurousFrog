@@ -65,7 +65,7 @@ func flip_h():
 	if direction_horizontal != 0:
 		$Sprite.flip_h = direction_horizontal > 0
 
-# Función para añadir monedas al jugador
+# Añadir monedas al jugador
 func add_Coin():
 	var canvasLayer = get_tree().get_root().find_node("CanvasLayer", true, false)
 	if canvasLayer:
@@ -75,4 +75,4 @@ func add_Coin():
 func _loseLife():
 	print("Reinicia nivel")
 	CoinManager.on_player_death()  # Reinicia las monedas del nivel actual
-	get_tree().reload_current_scene()  # Reinicia la escena actual
+	get_tree().reload_current_scene()  # Reinicia la escena actualS

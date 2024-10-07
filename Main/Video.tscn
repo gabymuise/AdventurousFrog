@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Main/Video.gd" type="Script" id=1]
-[ext_resource path="res://Sounds/SoundMenu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Decorator/RANASALTARINA.jpg" type="Texture" id=2]
 
 [sub_resource type="DynamicFontData" id=33]
 font_path = "res://font/Asquire.otf"
@@ -27,6 +27,13 @@ bg_color = Color( 1, 1, 1, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 38.0
+texture = ExtResource( 2 )
+expand = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_left = 0.5
@@ -112,8 +119,6 @@ custom_fonts/font = SubResource( 24 )
 custom_styles/hover = SubResource( 25 )
 custom_styles/normal = SubResource( 26 )
 text = "BACK"
-
-[node name="SoundMenu" parent="." instance=ExtResource( 2 )]
 
 [connection signal="toggled" from="HBoxContainer/Checks/FullScreen" to="." method="_on_FullScreen_toggled"]
 [connection signal="toggled" from="HBoxContainer/Checks/Borderless" to="." method="_on_Borderless_toggled"]

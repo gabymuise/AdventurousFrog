@@ -5,7 +5,7 @@ var scene_stack : Array = []
 # Añade una escena a la pila
 func push_scene(scene_path: String) -> void:
 	scene_stack.append(scene_path)
-	print("Scene pushed: ", scene_path)  # Depuración
+	print("Scene pushed: ", scene_path) # Depuración
 
 # Elimina la última escena de la pila y la retorna
 func pop_scene() -> String:

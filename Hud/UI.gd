@@ -3,7 +3,6 @@ extends CanvasLayer
 func _ready():
 	# Mostrar el número inicial de monedas en el HUD
 	$CoinsCollectedTxt.text = String(CoinManager.get_total_coins())
-	# Conectar las señales después de un retraso
 	call_deferred("_connect_coin_signals")
 
 func _connect_coin_signals():

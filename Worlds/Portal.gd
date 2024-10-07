@@ -12,4 +12,5 @@ func _on_Area2D_body_entered(body):
 				get_tree().change_scene(next_level_scene)
 			else:
 				print("No se encontró el siguiente nivel. Volviendo al menú principal.")
+				AudioManager.play_menu_music() 
 				get_tree().change_scene(main_menu_scene_path)
