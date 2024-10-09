@@ -1,7 +1,15 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Hud/UI.gd" type="Script" id=1]
 [ext_resource path="res://Decorator/Objects/coin_gold.png" type="Texture" id=2]
+[ext_resource path="res://Decorator/btnApxl2.png" type="Texture" id=3]
+[ext_resource path="res://Decorator/salir.png" type="Texture" id=4]
+[ext_resource path="res://Decorator/btnApxl.png" type="Texture" id=5]
+[ext_resource path="res://Decorator/btnDpxl2.png" type="Texture" id=6]
+[ext_resource path="res://Decorator/salirpress.png" type="Texture" id=7]
+[ext_resource path="res://Decorator/btnSpace2.png" type="Texture" id=8]
+[ext_resource path="res://Decorator/btnDpxl.png" type="Texture" id=9]
+[ext_resource path="res://Decorator/btnSpace1.png" type="Texture" id=10]
 
 [sub_resource type="StyleBoxFlat" id=18]
 bg_color = Color( 0.976471, 0.988235, 0.996078, 0.470588 )
@@ -59,3 +67,38 @@ margin_bottom = 26.0
 rect_scale = Vector2( 3, 3 )
 custom_fonts/font = SubResource( 20 )
 text = "00"
+
+[node name="Control" type="Control" parent="."]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TouchA" type="TouchScreenButton" parent="Control"]
+position = Vector2( 84, 483 )
+scale = Vector2( 2.27273, 1.61363 )
+normal = ExtResource( 3 )
+pressed = ExtResource( 5 )
+action = "ui_left"
+
+[node name="TouchD" type="TouchScreenButton" parent="Control"]
+position = Vector2( 243, 483 )
+scale = Vector2( 2.27273, 1.61363 )
+normal = ExtResource( 6 )
+pressed = ExtResource( 9 )
+action = "ui_right"
+
+[node name="TouchSpace" type="TouchScreenButton" parent="Control"]
+position = Vector2( 872, 483 )
+scale = Vector2( 1.27778, 1.31818 )
+normal = ExtResource( 8 )
+pressed = ExtResource( 10 )
+action = "jump"
+
+[node name="TouchX" type="TouchScreenButton" parent="Control"]
+position = Vector2( 943, 0 )
+scale = Vector2( 0.229358, 0.230994 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 7 )

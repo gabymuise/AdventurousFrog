@@ -297,10 +297,11 @@ position = Vector2( 64, -4 )
 position = Vector2( 32, 44 )
 
 [node name="btnP" parent="btnA" instance=ExtResource( 18 )]
+visible = false
 position = Vector2( 178, -225 )
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
-position = Vector2( 13, 224 )
+position = Vector2( 0, 223 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( 2, -94 )
@@ -316,6 +317,7 @@ margin_right = 2.0
 margin_bottom = -98.0
 
 [node name="Label2" type="Label" parent="."]
+visible = false
 margin_left = 13.0
 margin_top = -107.0
 margin_right = 123.0
