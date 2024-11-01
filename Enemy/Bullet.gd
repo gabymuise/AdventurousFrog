@@ -14,5 +14,5 @@ func _process(delta):
 # Maneja la colisión con otros cuerpos.
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Players"):  # Verifica si el cuerpo pertenece al grupo "Players".
-		body.lose_health()  # Llama al método para reducir la salud del jugador.
+		body.call_deferred("lose_health")  # Llama al método para reducir la salud del jugador de manera segura.
 		queue_free()  # Destruye la bala después de impactar.

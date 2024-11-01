@@ -99,16 +99,19 @@ size_flags_horizontal = 3
 [node name="Master" type="HSlider" parent="HBoxContainer/Slider"]
 margin_right = 125.0
 margin_bottom = 16.0
+value = 100.0
 
 [node name="Music" type="HSlider" parent="HBoxContainer/Slider"]
 margin_top = 20.0
 margin_right = 125.0
 margin_bottom = 36.0
+value = 100.0
 
 [node name="SoundFx" type="HSlider" parent="HBoxContainer/Slider"]
 margin_top = 40.0
 margin_right = 125.0
 margin_bottom = 56.0
+value = 100.0
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 visible = false
