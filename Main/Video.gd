@@ -1,23 +1,25 @@
-extends Control
+extends Control  # Hereda de Control para crear un nodo de interfaz de usuario
 
 func _ready():
-	visible = true
+	visible = true  # Asegura que el menú sea visible al iniciar
 
-# Configuración de pantalla completa, ventana sin bordes y VSync
-func _on_FullScreen_toggled(button_pressed):
-	OS.window_fullscreen = button_pressed
+# Configuración de pantalla completa
+func _on_FullScreen_toggled(button_pressed: bool):
+	OS.window_fullscreen = button_pressed  # Cambia al modo de pantalla completa según el estado del botón
 
-func _on_Borderless_toggled(button_pressed):
-	OS.window_borderless = button_pressed
+# Configuración de ventana sin bordes
+func _on_Borderless_toggled(button_pressed: bool):
+	OS.window_borderless = button_pressed  # Cambia al modo sin bordes según el estado del botón
 
-func _on_VSync_toggled(button_pressed):
-	OS.vsync_enabled = button_pressed
+# Configuración de VSync
+func _on_VSync_toggled(button_pressed: bool):
+	OS.vsync_enabled = button_pressed  # Habilita o deshabilita VSync según el estado del botón
 
 # Volver a la escena anterior utilizando PilaScene
 func _on_BackVideo_pressed():
-	if PilaScene.scene_stack.size() > 0:
-		print("Returning to previous scene: ", PilaScene.scene_stack.back())
-		get_tree().change_scene(PilaScene.pop_scene())
+	if PilaScene.scene_stack.size() > 0:  # Verifica si hay escenas en la pila
+		print("Returning to previous scene: ", PilaScene.scene_stack.back())  # Muestra la escena anterior
+		get_tree().change_scene(PilaScene.pop_scene())  # Cambia a la escena anterior
 	else:
-		print("No previous scene found, returning to settings.")
-		get_tree().change_scene("res://Main/Setting.tscn")
+		print("No previous scene found, returning to settings.")  # Mensaje si no hay escena anterior
+		get_tree().change_scene("res://Main/Setting.tscn")  # Regresa a la escena de configuración si no hay escena anterior

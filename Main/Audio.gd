@@ -1,23 +1,28 @@
 extends Control
 
+# Asegura que el nodo sea visible.
 func _ready():
 	visible = true
 
-# Ajustar el volumen del bus de audio
+# Ajusta el volumen del bus de audio.
 func volume(bus_index, value):
 	AudioServer.set_bus_volume_db(bus_index, value)
 
-# Responder a cambios de volumen en diferentes buses
+# Ajusta el volumen del bus maestro.
 func _on_Master_value_changed(value):
 	volume(0, value)
 
+# Ajusta el volumen del bus de música.
 func _on_Music_value_changed(value):
 	volume(1, value)
 
+# Ajusta el volumen del bus de efectos.
 func _on_SoundFx_value_changed(value):
 	volume(2, value)
 
-# Volver a la escena anterior utilizando PilaScene
+# Este método se ejecuta cuando se presiona el botón "BackAudio".
+# Regresa a la escena anterior utilizando la pila de escenas "PilaScene".
+# Si no hay escenas en la pila, vuelve a la escena de configuración.
 func _on_BackAudio_pressed():
 	if PilaScene.scene_stack.size() > 0:
 		print("Returning to previous scene: ", PilaScene.scene_stack.back())

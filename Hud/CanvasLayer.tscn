@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Hud/UI.gd" type="Script" id=1]
 [ext_resource path="res://Decorator/Objects/coin_gold.png" type="Texture" id=2]
+[ext_resource path="res://Decorator/UI/hearts.png" type="Texture" id=3]
 
 [sub_resource type="StyleBoxFlat" id=18]
 bg_color = Color( 0.976471, 0.988235, 0.996078, 0.470588 )
@@ -23,6 +24,39 @@ font_path = "res://font/Asquire.otf"
 [sub_resource type="DynamicFont" id=20]
 size = 18
 font_data = SubResource( 17 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 48, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=24]
+animations = [ {
+"frames": [ SubResource( 21 ) ],
+"loop": true,
+"name": "empty",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 22 ) ],
+"loop": true,
+"name": "full",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 23 ) ],
+"loop": true,
+"name": "half",
+"speed": 5.0
+} ]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -59,3 +93,21 @@ margin_bottom = 26.0
 rect_scale = Vector2( 3, 3 )
 custom_fonts/font = SubResource( 20 )
 text = "00"
+
+[node name="Heart1" type="AnimatedSprite" parent="."]
+position = Vector2( 934, 20 )
+scale = Vector2( 1.82813, 1.8125 )
+frames = SubResource( 24 )
+animation = "full"
+
+[node name="Heart2" type="AnimatedSprite" parent="."]
+position = Vector2( 962, 20 )
+scale = Vector2( 1.82813, 1.8125 )
+frames = SubResource( 24 )
+animation = "full"
+
+[node name="Heart3" type="AnimatedSprite" parent="."]
+position = Vector2( 990, 20 )
+scale = Vector2( 1.82813, 1.8125 )
+frames = SubResource( 24 )
+animation = "full"

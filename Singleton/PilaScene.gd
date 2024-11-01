@@ -1,27 +1,27 @@
 extends Node
 
-var scene_stack : Array = []
+var scene_stack : Array = []  # Pila para almacenar las escenas
 
 # Añade una escena a la pila
 func push_scene(scene_path: String) -> void:
-	scene_stack.append(scene_path)
-	print("Scene pushed: ", scene_path) # Depuración
+	scene_stack.append(scene_path)  # Agrega la ruta de la escena a la pila
+	print("Scene pushed: ", scene_path)  # Debug
 
 # Elimina la última escena de la pila y la retorna
 func pop_scene() -> String:
-	return scene_stack.pop_back() if scene_stack.size() > 0 else ""
+	return scene_stack.pop_back() if scene_stack.size() > 0 else ""  # Retorna la última escena, o una cadena vacía si la pila está vacía
 
 # Limpia la pila de escenas
 func clear_stack() -> void:
-	scene_stack.clear()
-	print("Scene stack cleared.")  # Depuración
+	scene_stack.clear()  # Limpia la pila
+	print("Scene stack cleared.")  # Debug
 
 # Manejador para regresar a la escena anterior
 func _on_Back_pressed():
-	var previous_scene = pop_scene()
+	var previous_scene = pop_scene()  # Obtiene la escena anterior de la pila
 	if previous_scene != "":
-		print("Returning to previous scene: ", previous_scene)  # Depuración
-		get_tree().change_scene(previous_scene)
+		print("Returning to previous scene: ", previous_scene)  # Debug
+		get_tree().change_scene(previous_scene)  # Cambia a la escena anterior
 	else:
-		print("No previous scene found, returning to menu.")  # Depuración
-		get_tree().change_scene("res://Main/Menu.tscn")
+		print("No previous scene found, returning to menu.")  # Debug
+		get_tree().change_scene("res://Main/Menu.tscn")  # Si no hay escena anterior, vuelve al menú principal
