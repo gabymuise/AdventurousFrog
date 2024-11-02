@@ -106,14 +106,3 @@ func apply_knockback(player):
 
 	# Para un efecto de retroceso más suave:
 	player.velocity += Vector2(direction.x * knockback_force, -100).normalized() * knockback_force * 0.5
-
-# Manejar pérdida de vida basada en la posición del enemigo
-func _lose_Life(enemy_pos: Vector2):
-	# Determinar dirección para el retroceso
-	if position.x < enemy_pos.x:
-		motion.x = -knockback_force  # Retroceso hacia la izquierda
-	else:
-		motion.x = knockback_force  # Retroceso hacia la derecha
-
-	motion.y = -100  # Retroceso hacia arriba
-	velocity += motion  # Aplicar movimiento a la velocidad del jugador
