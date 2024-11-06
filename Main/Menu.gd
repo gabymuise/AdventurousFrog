@@ -13,4 +13,4 @@ func _on_Exit_pressed():
 # Método llamado al presionar el botón "Setting"
 func _on_Setting_pressed():
 	# Abrir la escena de configuraciones
-	var a = get_tree().change_scene("res://Main/Setting.tscn")  # Cambia a la escena de configuración
+	get_tree().change_scene("res://Main/Setting.tscn")  # Cambia a la escena de configuración
