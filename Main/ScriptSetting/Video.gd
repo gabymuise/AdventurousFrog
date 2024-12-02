@@ -11,10 +11,6 @@ func _on_FullScreen_toggled(button_pressed: bool):
 func _on_Borderless_toggled(button_pressed: bool):
 	OS.window_borderless = button_pressed  # Cambia al modo sin bordes según el estado del botón
 
-# Configuración de VSync
-func _on_VSync_toggled(button_pressed: bool):
-	OS.vsync_enabled = button_pressed  # Habilita o deshabilita VSync según el estado del botón
-
 # Volver a la escena anterior utilizando PilaScene
 func _on_BackVideo_pressed():
 	if PilaScene.scene_stack.size() > 0:  # Verifica si hay escenas en la pila

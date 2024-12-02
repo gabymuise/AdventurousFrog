@@ -3,7 +3,6 @@
 [ext_resource path="res://Main/ScriptSetting/Video.gd" type="Script" id=1]
 [ext_resource path="res://Main/DecoratorMenu/RANASALTARINA.jpg" type="Texture" id=2]
 
-
 [sub_resource type="DynamicFontData" id=33]
 font_path = "res://font/Asquire.otf"
 
@@ -62,27 +61,20 @@ margin_right = 92.0
 margin_bottom = 80.0
 
 [node name="FullScreen" type="Label" parent="HBoxContainer/Labels"]
+margin_top = 7.0
 margin_right = 92.0
-margin_bottom = 23.0
+margin_bottom = 30.0
 size_flags_vertical = 6
 custom_fonts/font = SubResource( 28 )
 text = "FullScreen"
 
 [node name="Borderless" type="Label" parent="HBoxContainer/Labels"]
-margin_top = 28.0
+margin_top = 49.0
 margin_right = 92.0
-margin_bottom = 51.0
+margin_bottom = 72.0
 size_flags_vertical = 6
 custom_fonts/font = SubResource( 28 )
 text = "Borderless"
-
-[node name="VSync" type="Label" parent="HBoxContainer/Labels"]
-margin_top = 56.0
-margin_right = 92.0
-margin_bottom = 79.0
-size_flags_vertical = 6
-custom_fonts/font = SubResource( 28 )
-text = "VSync"
 
 [node name="Checks" type="VBoxContainer" parent="HBoxContainer"]
 margin_left = 96.0
@@ -97,11 +89,6 @@ margin_bottom = 24.0
 margin_top = 28.0
 margin_right = 24.0
 margin_bottom = 52.0
-
-[node name="VSync" type="CheckBox" parent="HBoxContainer/Checks"]
-margin_top = 56.0
-margin_right = 24.0
-margin_bottom = 80.0
 
 [node name="BackVideo" type="Button" parent="."]
 anchor_left = 0.5
@@ -123,5 +110,4 @@ text = "BACK"
 
 [connection signal="toggled" from="HBoxContainer/Checks/FullScreen" to="." method="_on_FullScreen_toggled"]
 [connection signal="toggled" from="HBoxContainer/Checks/Borderless" to="." method="_on_Borderless_toggled"]
-[connection signal="toggled" from="HBoxContainer/Checks/VSync" to="." method="_on_VSync_toggled"]
 [connection signal="pressed" from="BackVideo" to="." method="_on_BackVideo_pressed"]
