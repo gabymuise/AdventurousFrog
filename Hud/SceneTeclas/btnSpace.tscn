@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Hud/DecoratorTeclas/btnSpace1.png" type="Texture" id=1]
+[ext_resource path="res://Hud/DecoratorTeclas/btnSpace2.png" type="Texture" id=2]
+
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "btnSpace",
+"speed": 5.0
+} ]
+
+[node name="btnSpace" type="Node2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "btnSpace"
+frame = 1
+speed_scale = 0.5
+playing = true

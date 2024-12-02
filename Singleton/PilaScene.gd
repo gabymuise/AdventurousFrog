@@ -24,4 +24,4 @@ func _on_Back_pressed():
 		get_tree().change_scene(previous_scene)  # Cambia a la escena anterior
 	else:
 		print("No previous scene found, returning to menu.")  # Debug
-		get_tree().change_scene("res://Main/Menu.tscn")  # Si no hay escena anterior, vuelve al menú principal
+		get_tree().change_scene("res://Main/SceneMenu/Menu.tscn")  # Si no hay escena anterior, vuelve al menú principal

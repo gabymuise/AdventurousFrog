@@ -12,14 +12,14 @@ func _ready():
 # Reproduce la música del menú.
 func play_menu_music():
 	stop_current_music()  # Detener cualquier música en reproducción.
-	var menu_music = preload("res://Sounds/Intense.mp3")  # Carga la música del menú.
+	var menu_music = preload("res://Sounds/Sound/Intense.mp3")  # Carga la música del menú.
 	background_music.stream = menu_music
 	background_music.play()
 
 # Reproduce la música del nivel.
 func play_level_music():
 	stop_current_music()  # Detener cualquier música en reproducción.
-	var level_music = preload("res://Sounds/Peaceful Place.mp3")  # Carga la música del nivel.
+	var level_music = preload("res://Sounds/Sound/Peaceful Place.mp3")  # Carga la música del nivel.
 	background_music.stream = level_music
 	background_music.play()
 
