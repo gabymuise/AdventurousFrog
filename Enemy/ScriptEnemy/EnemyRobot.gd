@@ -4,6 +4,7 @@ var bullet_scene = preload("res://Enemy/SceneEnemy/Bullet.tscn")  # Pre-carga la
 
 # Se ejecuta cuando el nodo está listo
 func _ready():
+	health = 2  # EnemyRobot has 2 health points
 	$VisionArea.connect("body_entered", self, "_on_vision_area_entered")
 
 # Método que se activa cuando un cuerpo entra en el área de visión
@@ -19,3 +20,8 @@ func shoot_bullet():
 	bullet_instance.position = position  # Establece la posición de la bala en la posición actual del enemigo
 	var player = get_tree().get_root().find_node("Player", true, false)  # Encuentra el nodo del jugador en la escena
 	bullet_instance.direction = (player.position - position).normalized()  # Calcula la dirección hacia el jugador y la normaliza
+
+func take_damage(amount):
+	health -= amount
+	if health <= 0:
+		queue_free()

@@ -17,7 +17,6 @@
 [ext_resource path="res://Worlds/ScriptLevel/level.gd" type="Script" id=17]
 [ext_resource path="res://Hud/SceneTeclas/btnP.tscn" type="PackedScene" id=18]
 
-
 [sub_resource type="DynamicFontData" id=15]
 font_path = "res://font/Asquire.otf"
 

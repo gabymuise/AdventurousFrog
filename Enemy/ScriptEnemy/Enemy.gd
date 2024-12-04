@@ -4,6 +4,7 @@ var gravity = 0  # Gravedad aplicada al enemigo
 var speed = 25  # Velocidad de movimiento del enemigo
 var velocity = Vector2(0, 0)  # Vector de velocidad del enemigo
 var moving_left = true  # Indica si el enemigo se mueve hacia la izquierda
+var health = 1
 
 func _ready():
 	$RayCast2D.enabled = true
@@ -46,6 +47,11 @@ func _on_Area2D_body_entered(body):
 		print("Jugador ha colisionado con el enemigo")  # Debug
 		body.lose_health(1)  # Llama al método para que el jugador pierda vida
 		apply_knockback(body)  # Aplica knockback al jugador
+
+func take_damage(amount):
+	health -= amount
+	if health <= 0:
+		queue_free()
 
 # Aplica el knockback al jugador
 func apply_knockback(player):

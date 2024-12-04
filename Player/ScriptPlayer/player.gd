@@ -8,6 +8,10 @@ export var knockback_force: float = 200.0
 export var distance_jump: float = 5 * ppm  # La altura del salto
 export var time_jump: float = 0.5  # Duración del salto
 
+var bullet_scene = preload("res://Player/ScenePlayer/BulletPlayer.tscn")
+export var shoot_cooldown = 0.5
+var can_shoot = true
+
 var life = 3  # Vidas totales
 var current_health: int = life  # Salud actual del jugador
 var has_lost: bool = false  # Bandera para rastrear si el jugador ha perdido
@@ -31,9 +35,22 @@ func _physics_process(delta):
 	update_physics(delta)  # Actualizar cálculos físicos
 	update_animation()  # Actualizar animaciones del personaje según el estado
 
+func shoot():
+	if can_shoot:
+		var bullet = bullet_scene.instance()
+		bullet.position = position + Vector2(20, 0)  # Adjust this offset as needed
+		bullet.direction = Vector2.RIGHT if not $Sprite.flip_h else Vector2.LEFT
+		get_parent().add_child(bullet)
+		can_shoot = false
+		yield(get_tree().create_timer(shoot_cooldown), "timeout")
+		can_shoot = true
+
+# Modify the handle_input function to include shooting
 func handle_input(event):
-	calculate_jump(event)  # Manejar entrada de salto
-	calculate_direction()  # Manejar entrada de movimiento horizontal
+	calculate_jump(event)
+	calculate_direction()
+	if event.is_action_pressed("shoot"):
+		shoot()
 
 func update_physics(delta):
 	apply_gravity(delta)  # Aplicar gravedad al jugador
