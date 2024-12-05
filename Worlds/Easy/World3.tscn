@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Worlds/Deco/clouds.png" type="Texture" id=3]
 [ext_resource path="res://Worlds/Deco/water_a_8frames.png" type="Texture" id=4]
@@ -7,7 +7,6 @@
 [ext_resource path="res://Player/ScenePlayer/player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Collectors/SceneCollector/coin_silver.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Worlds/Script/ZoneFall.gd" type="Script" id=9]
-[ext_resource path="res://Worlds/Deco/lava.png" type="Texture" id=10]
 [ext_resource path="res://Enemy/SceneEnemy/EnemyBlowfly.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Main/SceneMenu/MenuPause.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Worlds/ScenePortal/Portal.tscn" type="PackedScene" id=13]
@@ -214,14 +213,9 @@ script = ExtResource( 14 )
 nextLevel = 3
 
 [node name="WaterA8Frames" type="Sprite" parent="."]
-position = Vector2( 587, -433 )
-scale = Vector2( 23.1641, 56.9688 )
+position = Vector2( 587, -749 )
+scale = Vector2( 24.9516, 83.13 )
 texture = ExtResource( 4 )
-
-[node name="Lava" type="Sprite" parent="."]
-position = Vector2( 608, 559.875 )
-scale = Vector2( 15.4427, 10.9219 )
-texture = ExtResource( 10 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )

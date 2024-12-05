@@ -25,8 +25,7 @@ onready var gravity = (2 * distance_jump) / (time_jump * time_jump)
 onready var speed: float = 8 * ppm  # Velocidad de movimiento del jugador
 
 func _ready():
-	if not is_in_group("Players"):
-		add_to_group("Players")  # Agregar al grupo de jugadores para identificación
+	pass
 
 func _input(event):
 	handle_input(event)  # Manejar eventos de entrada del jugador
@@ -41,8 +40,6 @@ func shoot():
 		bullet.position = position + Vector2(20, 0)  # Adjust this offset as needed
 		bullet.direction = Vector2.RIGHT if not $Sprite.flip_h else Vector2.LEFT
 		get_parent().add_child(bullet)
-		can_shoot = false
-		yield(get_tree().create_timer(shoot_cooldown), "timeout")
 		can_shoot = true
 
 # Modify the handle_input function to include shooting
