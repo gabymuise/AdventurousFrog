@@ -5,7 +5,8 @@ var bullet_scene = preload("res://Enemy/SceneEnemy/Bullet.tscn")  # Pre-carga la
 # Se ejecuta cuando el nodo está listo
 func _ready():
 	health = 2  # EnemyRobot has 2 health points
-	$VisionArea.connect("body_entered", self, "_on_vision_area_entered")
+	var _connect_result = $VisionArea.connect("body_entered", self, "_on_vision_area_entered")
+
 
 # Método que se activa cuando un cuerpo entra en el área de visión
 func _on_vision_area_entered(body):
@@ -25,3 +26,8 @@ func take_damage(amount):
 	health -= amount
 	if health <= 0:
 		queue_free()
+	else:
+		# Optional: Add visual feedback when hit but not destroyed
+		modulate = Color(1, 0.5, 0.5)  # Turn the sprite reddish
+		yield(get_tree().create_timer(0.1), "timeout")
+		modulate = Color(1, 1, 1)  # Return to normal color

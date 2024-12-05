@@ -1,6 +1,9 @@
 extends Control  # Hereda de Control para crear un nodo de interfaz de usuario
 
+var scene_changer = preload("res://Singleton/SceneChanger.gd").new()
+
 func _ready():
+	add_child(scene_changer)
 	visible = true  # Asegura que el menú sea visible al iniciar
 
 # Configuración de pantalla completa
@@ -15,7 +18,8 @@ func _on_Borderless_toggled(button_pressed: bool):
 func _on_BackVideo_pressed():
 	if PilaScene.scene_stack.size() > 0:  # Verifica si hay escenas en la pila
 		print("Returning to previous scene: ", PilaScene.scene_stack.back())  # Muestra la escena anterior
-		get_tree().change_scene(PilaScene.pop_scene())  # Cambia a la escena anterior
+		scene_changer.change_scene(PilaScene.pop_scene())  # Cambia a la escena anterior
 	else:
 		print("No previous scene found, returning to settings.")  # Mensaje si no hay escena anterior
-		get_tree().change_scene("res://Main/Setting.tscn")  # Regresa a la escena de configuración si no hay escena anterior
+		scene_changer.change_scene("res://Main/Setting.tscn")  # Regresa a la escena de configuración si no hay escena anterior
+

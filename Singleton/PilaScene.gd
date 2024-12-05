@@ -1,6 +1,10 @@
 extends Node
 
 var scene_stack : Array = []  # Pila para almacenar las escenas
+var scene_changer = preload("res://Singleton/SceneChanger.gd").new()
+
+func _ready():
+	add_child(scene_changer)
 
 # Añade una escena a la pila
 func push_scene(scene_path: String) -> void:
@@ -21,7 +25,8 @@ func _on_Back_pressed():
 	var previous_scene = pop_scene()  # Obtiene la escena anterior de la pila
 	if previous_scene != "":
 		print("Returning to previous scene: ", previous_scene)  # Debug
-		get_tree().change_scene(previous_scene)  # Cambia a la escena anterior
+		scene_changer.change_scene(previous_scene)  # Cambia a la escena anterior
 	else:
 		print("No previous scene found, returning to menu.")  # Debug
-		get_tree().change_scene("res://Main/SceneMenu/Menu.tscn")  # Si no hay escena anterior, vuelve al menú principal
+		scene_changer.change_scene("res://Main/SceneMenu/Menu.tscn")  # Si no hay escena anterior, vuelve al menú principal
+
