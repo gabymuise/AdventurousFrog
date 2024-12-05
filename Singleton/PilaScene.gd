@@ -1,10 +1,9 @@
 extends Node
 
 var scene_stack : Array = []  # Pila para almacenar las escenas
-var scene_changer = preload("res://Singleton/SceneChanger.gd").new()
 
 func _ready():
-	add_child(scene_changer)
+	pass
 
 # Añade una escena a la pila
 func push_scene(scene_path: String) -> void:

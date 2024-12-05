@@ -1,9 +1,6 @@
 extends Control  # Hereda de Control para crear un nodo de interfaz de usuario
 
-var scene_changer = preload("res://Singleton/SceneChanger.gd").new()
-
 func _ready():
-	add_child(scene_changer)
 	visible = true  # Asegura que el menú sea visible al iniciar
 
 # Configuración de pantalla completa

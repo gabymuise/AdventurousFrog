@@ -1,9 +1,7 @@
 extends Control
 
-var scene_changer = preload("res://Singleton/SceneChanger.gd").new()
-
 func _ready():
-	add_child(scene_changer)
+	pass
 
 # Método llamado al presionar el botón "Play"
 func _on_Play_pressed():

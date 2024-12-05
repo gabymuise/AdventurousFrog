@@ -1,9 +1,6 @@
 extends Control
 
-var scene_changer = preload("res://Singleton/SceneChanger.gd").new()
-
 func _ready():
-	add_child(scene_changer)
 	visible = true  # Hace visible el control al iniciar
 
 # Cambiar a la escena de video

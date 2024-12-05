@@ -1,9 +1,7 @@
 extends Control
 
-var scene_changer = preload("res://Singleton/SceneChanger.gd").new()
 
 func _ready():
-	add_child(scene_changer)
 	visible = false  # Inicialmente oculto
 
 # Manejar la pausa del juego

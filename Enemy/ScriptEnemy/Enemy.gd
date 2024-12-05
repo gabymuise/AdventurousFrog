@@ -10,7 +10,7 @@ func _ready():
 	$RayCast2D.enabled = true
 
 # Se ejecuta cada frame
-func _process(delta):
+func _process(_delta):
 	apply_gravity()  # Aplica gravedad al enemigo
 	move_character()  # Mueve al enemigo en la dirección actual
 

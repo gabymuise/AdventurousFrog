@@ -1,10 +1,9 @@
 extends Node2D
 
-var scene_changer = preload("res://Singleton/SceneChanger.gd").new()
 export (String) var ruta_menu_principal = "res://Main/SceneMenu/Menu.tscn"  # Ruta de la escena del menú principal
 
 func _ready():
-	add_child(scene_changer)
+	pass
 
 func _on_Area2D_body_entered(cuerpo):
 	if cuerpo.is_in_group("Players"):  # Verifica si el cuerpo pertenece al grupo "Players"
