@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Worlds/Tilesets/World_tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://Worlds/Deco/water_a_8frames.png" type="Texture" id=4]
+[ext_resource path="res://Worlds/Deco/Nature/nature_4/origbig.png" type="Texture" id=2]
 [ext_resource path="res://Hud/SceneHud/CanvasLayer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Player/ScenePlayer/player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Collectors/SceneCollector/coin_silver.tscn" type="PackedScene" id=8]
@@ -22,9 +22,9 @@ script = ExtResource( 14 )
 nextLevel = 4
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 518.5, -640 )
-scale = Vector2( 23.7383, 76.5625 )
-texture = ExtResource( 4 )
+position = Vector2( 267.57, -379 )
+scale = Vector2( 2.2686, 1.39661 )
+texture = ExtResource( 2 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
