@@ -218,8 +218,8 @@ script = ExtResource( 17 )
 nextLevel = 1
 
 [node name="WaterA8Frames" type="Sprite" parent="."]
-position = Vector2( 23, -90.75 )
-scale = Vector2( 1.37739, 1.13773 )
+position = Vector2( 158.623, -90.75 )
+scale = Vector2( 1.49512, 1.13773 )
 texture = ExtResource( 1 )
 
 [node name="TileMap" type="TileMap" parent="."]
