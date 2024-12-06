@@ -3,7 +3,6 @@
 [ext_resource path="res://Hud/DecoratorTeclas/btnApxl.png" type="Texture" id=1]
 [ext_resource path="res://Hud/DecoratorTeclas/btnApxl2.png" type="Texture" id=2]
 
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
@@ -19,6 +18,5 @@ position = Vector2( 0.5, 0 )
 scale = Vector2( 0.980769, 1 )
 frames = SubResource( 1 )
 animation = "btnA"
-frame = 1
 speed_scale = 0.5
 playing = true

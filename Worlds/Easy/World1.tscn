@@ -1,6 +1,7 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Worlds/Deco/Nature/nature_1/origbig.png" type="Texture" id=1]
+[ext_resource path="res://Hud/SceneTeclas/Teclas.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Worlds/Deco/clouds.png" type="Texture" id=3]
 [ext_resource path="res://Worlds/Tilesets/tileset_desert.png" type="Texture" id=5]
 [ext_resource path="res://Hud/SceneHud/CanvasLayer.tscn" type="PackedScene" id=6]
@@ -223,6 +224,13 @@ font_path = "res://font/Asquire.otf"
 size = 19
 font_data = SubResource( 17 )
 
+[sub_resource type="DynamicFontData" id=19]
+font_path = "res://font/Asquire.otf"
+
+[sub_resource type="DynamicFont" id=20]
+size = 21
+font_data = SubResource( 19 )
+
 [node name="World" type="Node2D"]
 position = Vector2( 513, 303 )
 script = ExtResource( 17 )
@@ -281,6 +289,9 @@ position = Vector2( 32, 44 )
 [node name="btnP" parent="btnA" instance=ExtResource( 18 )]
 position = Vector2( 178, -225 )
 
+[node name="Mouse" parent="btnA" instance=ExtResource( 2 )]
+position = Vector2( 142, 18 )
+
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 13, 224 )
 
@@ -304,5 +315,13 @@ margin_right = 123.0
 margin_bottom = -87.0
 custom_fonts/font = SubResource( 18 )
 text = "PAUSE PRESS"
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 81.0
+margin_top = 62.0
+margin_right = 162.0
+margin_bottom = 85.0
+custom_fonts/font = SubResource( 20 )
+text = "shoot with"
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
