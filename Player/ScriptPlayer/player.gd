@@ -106,6 +106,9 @@ func lose_health(damage_amount: int = 1):
 	var hud = get_tree().get_root().find_node("CanvasLayer", true, false)  # Encontrar el HUD
 	if hud:
 		hud.lose_health(damage_amount)  # Actualizar la visualización de salud en el HUD
+		modulate = Color(1, 0.5, 0.5)  
+		yield(get_tree().create_timer(0.1), "timeout")
+		modulate = Color(1, 1, 1)  
 
 	if current_health <= 0 and not has_lost:
 		has_lost = true  # Death

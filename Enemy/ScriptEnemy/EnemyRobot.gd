@@ -27,7 +27,6 @@ func take_damage(amount):
 	if health <= 0:
 		queue_free()
 	else:
-		# Optional: Add visual feedback when hit but not destroyed
-		modulate = Color(1, 0.5, 0.5)  # Turn the sprite reddish
+		modulate = Color(1, 0.5, 0.5)  
 		yield(get_tree().create_timer(0.1), "timeout")
-		modulate = Color(1, 1, 1)  # Return to normal color
+		modulate = Color(1, 1, 1)  
