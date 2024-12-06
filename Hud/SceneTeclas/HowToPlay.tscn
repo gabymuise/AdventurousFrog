@@ -1,0 +1,282 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://Hud/DecoratorHud/nature_6/origbig.png" type="Texture" id=1]
+[ext_resource path="res://Hud/NewTeclas/keyboard_space_outline.png" type="Texture" id=2]
+[ext_resource path="res://Collectors/Decorator/coin_gold.png" type="Texture" id=3]
+[ext_resource path="res://Hud/NewTeclas/keyboard_d_outline.png" type="Texture" id=4]
+[ext_resource path="res://Worlds/DecoratorPortal/portalsSpriteSheet.png" type="Texture" id=5]
+[ext_resource path="res://Hud/NewTeclas/keyboard_arrow_up_outline.png" type="Texture" id=6]
+[ext_resource path="res://Enemy/Decorator/robot.png" type="Texture" id=7]
+[ext_resource path="res://Hud/NewTeclas/keyboard_arrow_right_outline.png" type="Texture" id=8]
+[ext_resource path="res://Collectors/Decorator/coin_silver.png" type="Texture" id=9]
+[ext_resource path="res://Hud/NewTeclas/mouse_left.png" type="Texture" id=10]
+[ext_resource path="res://Hud/NewTeclas/keyboard_arrow_left_outline.png" type="Texture" id=11]
+[ext_resource path="res://Enemy/Decorator/giant_blowfly.png" type="Texture" id=12]
+[ext_resource path="res://Hud/NewTeclas/keyboard_w_outline.png" type="Texture" id=13]
+[ext_resource path="res://Hud/NewTeclas/keyboard_a_outline.png" type="Texture" id=14]
+[ext_resource path="res://Hud/ScriptHud/HowToPlay.gd" type="Script" id=15]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://font/Asquire.otf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 23
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://font/Asquire.otf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 38
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://font/Asquire.otf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 23
+font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://font/Asquire.otf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 23
+font_data = SubResource( 7 )
+
+[sub_resource type="DynamicFontData" id=9]
+font_path = "res://font/Asquire.otf"
+
+[sub_resource type="DynamicFont" id=10]
+size = 38
+font_data = SubResource( 9 )
+
+[sub_resource type="DynamicFontData" id=11]
+font_path = "res://font/Asquire.otf"
+
+[sub_resource type="DynamicFont" id=12]
+size = 38
+font_data = SubResource( 11 )
+
+[sub_resource type="DynamicFontData" id=13]
+font_path = "res://font/Asquire.otf"
+
+[sub_resource type="DynamicFont" id=14]
+font_data = SubResource( 13 )
+
+[sub_resource type="DynamicFontData" id=15]
+font_path = "res://font/Asquire.otf"
+
+[sub_resource type="DynamicFont" id=16]
+font_data = SubResource( 15 )
+
+[sub_resource type="DynamicFontData" id=17]
+font_path = "res://font/Asquire.otf"
+
+[sub_resource type="DynamicFont" id=18]
+size = 38
+font_data = SubResource( 17 )
+
+[sub_resource type="DynamicFontData" id=19]
+font_path = "res://font/Asquire.otf"
+
+[sub_resource type="DynamicFont" id=20]
+size = 23
+font_data = SubResource( 19 )
+
+[sub_resource type="DynamicFontData" id=21]
+font_path = "res://font/Asquire.otf"
+
+[sub_resource type="DynamicFont" id=22]
+size = 21
+font_data = SubResource( 21 )
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0.6, 0.6, 0.6, 0.67451 )
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="HowToPlay" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 15 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1268.0
+margin_bottom = 599.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="shoot" type="Label" parent="."]
+margin_left = 877.0
+margin_top = 354.0
+margin_right = 967.0
+margin_bottom = 377.0
+custom_fonts/font = SubResource( 2 )
+text = "shoot with"
+
+[node name="SpriteMouse" type="Sprite" parent="shoot"]
+position = Vector2( 47, 76 )
+scale = Vector2( 1.41138, 1.44409 )
+texture = ExtResource( 10 )
+
+[node name="player" type="Label" parent="."]
+margin_left = 710.0
+margin_top = 278.0
+margin_right = 837.0
+margin_bottom = 318.0
+custom_fonts/font = SubResource( 4 )
+text = "PLAYER"
+
+[node name="Jump" type="Label" parent="."]
+margin_left = 780.0
+margin_top = 354.0
+margin_right = 817.0
+margin_bottom = 377.0
+custom_fonts/font = SubResource( 6 )
+text = "Jump"
+
+[node name="SpriteW" type="Sprite" parent="Jump"]
+position = Vector2( 19.0001, 110 )
+scale = Vector2( 1.22656, 1.10156 )
+texture = ExtResource( 13 )
+
+[node name="SpriteUp" type="Sprite" parent="Jump"]
+position = Vector2( 19, 167 )
+scale = Vector2( 1.21875, 1.07813 )
+texture = ExtResource( 6 )
+
+[node name="SpriteSpace" type="Sprite" parent="Jump"]
+position = Vector2( 17.9999, 60 )
+scale = Vector2( 1.46875, 1.25 )
+texture = ExtResource( 2 )
+
+[node name="Move" type="Label" parent="."]
+margin_left = 613.0
+margin_top = 354.0
+margin_right = 665.0
+margin_bottom = 379.0
+custom_fonts/font = SubResource( 8 )
+text = "Move"
+
+[node name="SpriteRight" type="Sprite" parent="Move"]
+position = Vector2( 51, 60 )
+scale = Vector2( 0.890625, 0.75 )
+texture = ExtResource( 8 )
+
+[node name="SpriteLeft" type="Sprite" parent="Move"]
+position = Vector2( -0.999878, 59.0001 )
+scale = Vector2( 0.828123, 0.734375 )
+texture = ExtResource( 11 )
+
+[node name="SpriteA" type="Sprite" parent="Move"]
+position = Vector2( -6.10352e-05, 100 )
+scale = Vector2( 0.749998, 0.718749 )
+texture = ExtResource( 14 )
+
+[node name="SpriteD" type="Sprite" parent="Move"]
+position = Vector2( 52, 100 )
+scale = Vector2( 0.749999, 0.703125 )
+texture = ExtResource( 4 )
+
+[node name="Enemy" type="Label" parent="."]
+margin_left = 172.0
+margin_top = 278.0
+margin_right = 284.0
+margin_bottom = 318.0
+custom_fonts/font = SubResource( 10 )
+text = "Enemies"
+
+[node name="EnemyBlowfly" type="Sprite" parent="Enemy"]
+position = Vector2( -3, 112 )
+scale = Vector2( 1.6875, 1.73437 )
+texture = ExtResource( 12 )
+
+[node name="EnemyRobot" type="Sprite" parent="Enemy"]
+position = Vector2( 109, 112 )
+scale = Vector2( 1.6875, 1.71875 )
+texture = ExtResource( 7 )
+hframes = 5
+
+[node name="Collector" type="Label" parent="."]
+margin_left = 693.0
+margin_top = 35.0
+margin_right = 854.0
+margin_bottom = 75.0
+custom_fonts/font = SubResource( 12 )
+text = "Collectors"
+
+[node name="CoinGold" type="Sprite" parent="Collector"]
+position = Vector2( 126, 72 )
+scale = Vector2( 2.78938, 2.70312 )
+texture = ExtResource( 3 )
+hframes = 8
+
+[node name="CoinSilver" type="Sprite" parent="Collector"]
+position = Vector2( 44, 73 )
+scale = Vector2( 2.79731, 2.53125 )
+texture = ExtResource( 9 )
+hframes = 8
+
+[node name="LabelGold" type="Label" parent="Collector"]
+margin_left = 108.0
+margin_top = 93.0
+margin_right = 146.0
+margin_bottom = 111.0
+custom_fonts/font = SubResource( 14 )
+text = "+2 pts"
+
+[node name="LabelSilver" type="Label" parent="Collector"]
+margin_left = 22.0
+margin_top = 93.0
+margin_right = 57.0
+margin_bottom = 111.0
+custom_fonts/font = SubResource( 16 )
+text = "+1 pts"
+
+[node name="Portal" type="Label" parent="."]
+margin_left = 172.0
+margin_top = 35.0
+margin_right = 273.0
+margin_bottom = 75.0
+custom_fonts/font = SubResource( 18 )
+text = "Portal"
+
+[node name="SpritePortal" type="Sprite" parent="Portal"]
+position = Vector2( 51, 81 )
+scale = Vector2( 1.64062, 1.42708 )
+texture = ExtResource( 5 )
+hframes = 4
+vframes = 4
+
+[node name="Label" type="Label" parent="Portal"]
+margin_left = 8.0
+margin_top = 127.0
+margin_right = 101.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 20 )
+text = "Next level"
+
+[node name="Back" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -31.0
+margin_top = -29.0
+margin_right = 31.0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 22 )
+custom_styles/hover = SubResource( 23 )
+custom_styles/normal = SubResource( 24 )
+text = "BACK"
+
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]

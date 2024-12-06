@@ -24,4 +24,3 @@ func _on_exit_pressed():
 	PilaScene.scene_stack.clear()  # Limpia la pila de escenas
 	AudioManager.play_menu_music()  # Reproduce la música del menú
 	scene_changer.change_scene("res://Main/SceneMenu/Menu.tscn")  # Cambia a la escena del menú principal
-

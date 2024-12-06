@@ -13,3 +13,6 @@ func _on_Video_pressed():
 func _on_Back_pressed():
 	PilaScene._on_Back_pressed()  # Llama a la función para volver a la escena anterior
 
+func _on_HowToPlay_pressed():
+	PilaScene.push_scene(get_tree().current_scene.filename) 
+	scene_changer.change_scene("res://Hud/SceneTeclas/HowToPlay.tscn")  # Cambia a la escena del menú principal

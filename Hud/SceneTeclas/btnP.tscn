@@ -1,12 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Hud/DecoratorTeclas/btnP.png" type="Texture" id=1]
-[ext_resource path="res://Hud/DecoratorTeclas/btnP2.png" type="Texture" id=2]
-
+[ext_resource path="res://Hud/NewTeclas/keyboard_p_outline.png" type="Texture" id=1]
+[ext_resource path="res://Hud/NewTeclas/keyboard_p.png" type="Texture" id=2]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "btnP",
 "speed": 5.0
@@ -17,6 +16,5 @@ animations = [ {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "btnP"
-frame = 1
 speed_scale = 0.5
 playing = true
