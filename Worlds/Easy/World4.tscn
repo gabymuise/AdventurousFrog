@@ -22,8 +22,8 @@ script = ExtResource( 14 )
 nextLevel = 4
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 267.57, -379 )
-scale = Vector2( 2.2686, 1.39661 )
+position = Vector2( 267.57, -282.502 )
+scale = Vector2( 2.2686, 1.54553 )
 texture = ExtResource( 2 )
 
 [node name="TileMap" type="TileMap" parent="."]

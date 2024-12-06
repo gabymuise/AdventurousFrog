@@ -4,7 +4,7 @@ var bullet_scene = preload("res://Enemy/SceneEnemy/Bullet.tscn")  # Pre-carga la
 
 # Se ejecuta cuando el nodo está listo
 func _ready():
-	health = 2  # EnemyRobot has 2 health points
+	health = 2  
 	var _connect_result = $VisionArea.connect("body_entered", self, "_on_vision_area_entered")
 
 

@@ -14,6 +14,5 @@ func _on_Area2D_body_entered(body):
 		body.call_deferred("lose_health")  # Llama al método para reducir la salud del jugador de manera segura.
 		queue_free()  # Destruye la bala después de impactar.
 
-
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
